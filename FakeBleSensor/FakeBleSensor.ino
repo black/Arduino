@@ -1,13 +1,4 @@
-#include <ArduinoBLE.h>
-// Calculate maximum message length:
-// - Identifiers (a,i,v,p): 4 bytes
-// - 8 EEG values: each could be up to 4 digits + sign (±9999) = 5 bytes each = 40 bytes
-// - 6 IMU values: each could be up to 4 digits + sign = 5 bytes each = 30 bytes
-// - Battery voltage (4 digits with decimal): 5 bytes
-// - Battery percentage (3 digits): 3 bytes
-// - Separators (']'): 16 separators = 16 bytes
-// - Total: 4 + 40 + 30 + 5 + 3 + 16 = 98 bytes
-// - Round up to 100 for safety
+#include <ArduinoBLE.h> 
 
 const int MAX_MESSAGE_LENGTH = 100;
 
